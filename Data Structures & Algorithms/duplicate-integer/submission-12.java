@@ -1,0 +1,11 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        HashSet<Integer> numsList = new HashSet<>();
+
+        for(int i=0; i < nums.length; i++) {
+            if(numsList.contains(nums[i])) return true;
+            numsList.add(nums[i]);
+        }
+        return false;
+    }
+}
